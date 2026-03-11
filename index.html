@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Galaxy Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="stars"></div>
+<div class="galaxy"></div>
+
+<header>
+    <h1 class="glow-text">Rishetha Saranya</h1>
+    <p class="subtitle">Aspiring AI Engineer 🚀</p>
+</header>
+
+<section class="about card">
+    <h2>About Me</h2>
+    <p>
+        Passionate about AI, Machine Learning and Web Development.
+        I love building creative and real-world projects.
+    </p>
+</section>
+
+<section class="skills">
+    <h2>Skills</h2>
+    <div class="card-container">
+        <div class="card" onclick="showSkill('html')">HTML</div>
+        <div class="card" onclick="showSkill('css')">CSS</div>
+        <div class="card" onclick="showSkill('python')">Python</div>
+        <div class="card" onclick="showSkill('ml')">Machine Learning</div>
+        <div class="card" onclick="showSkill('streamlit')">Streamlit</div>
+        <div class="card" onclick="showSkill('mongo')">MongoDB</div>
+    </div>
+
+    <div class="info-box" id="skillInfo">
+        ✨ Click on a skill to see basic information...
+    </div>
+</section>
+
+<section class="projects">
+    <h2>Projects</h2>
+    <div class="card-container">
+        <div class="card">Cholesterol Prediction</div>
+        <div class="card">Student Attendance System</div>
+        <div class="card">House Price Prediction</div>
+    </div>
+</section>
+
+<footer>
+    <p>© Galaxy Portfolio 🌌</p>
+</footer>
+
+<script>
+function showSkill(skill) {
+
+    const info = document.getElementById("skillInfo");
+
+    const data = {
+        html: "HTML is the backbone of web development. It structures webpages using elements like headings, paragraphs, forms and images.",
+        css: "CSS is used to design and style web pages. It controls layout, colors, animations, responsiveness and visual effects.",
+        python: "Python is a powerful programming language used in AI, Machine Learning, web development and automation.",
+        ml: "Machine Learning enables systems to learn from data and make predictions or decisions without being explicitly programmed.",
+        streamlit: "Streamlit is a Python framework used to build interactive web applications for data science and ML projects.",
+        mongo: "MongoDB is a NoSQL database used to store data in flexible JSON-like documents, ideal for scalable applications."
+    };
+
+    info.innerHTML = data[skill];
+}
+</script>
+
+</body>
+</html>
